@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <v-app>
+    <header></header>
+    <router-view />
+    <footer></footer>
+  </v-app>
 </template>
 
 <script>
@@ -12,6 +13,7 @@ export default {
 </script>
 
 <style>
+@import 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
