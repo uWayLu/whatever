@@ -2,13 +2,18 @@
   <v-app>
     <header></header>
     <router-view />
-    <footer></footer>
+    <app-footer />
   </v-app>
 </template>
 
 <script>
+import AppFooter from '@/components/Footer';
+
 export default {
   name: 'App',
+  components: {
+    AppFooter,
+  },
 };
 </script>
 

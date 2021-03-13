@@ -31,3 +31,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 https://blog.csdn.net/swallowblank/article/details/95908433
 https://vuejsexamples.com/20-best-landing-page-template-with-vuejs/
+https://vuetifyjs.com/zh-Hans/components/application/#section-9ed88ba45e94752868078bb0
+
