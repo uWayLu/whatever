@@ -35,8 +35,8 @@
     <!-- About Me -->
     <section>
       <v-container class="mt-5">
-        <v-row justify="center">
-          <h1>About Me</h1>
+        <h1>About Me</h1>
+        <v-row justify="center" class="mt-1">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque sit amet ante pretium, porttitor urna nec, vehicula
@@ -58,6 +58,83 @@
           <v-btn color="blue lighten-2" class="ma-1" text icon
             ><v-icon large>mdi-twitter</v-icon>
           </v-btn>
+        </v-row>
+      </v-container>
+    </section>
+    <!-- Project -->
+    <section>
+      <v-container grid-list-xs class="mt-5">
+        <h1>Project</h1>
+        <v-row v-for="i in 2" :key="i" class="mt-1">
+          <v-col v-for="j in 4" :key="j">
+            <v-card shaped>
+              <v-card-title primary-title>
+                Card {{ 4 * (i - 1) + j }}
+              </v-card-title>
+              <v-card-subtitle>
+                subtitle
+              </v-card-subtitle>
+              <v-card-text>
+                Greyhound divisively hello coldly wonderfully marginally far
+                upon excluding.
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
+    <!-- My Speciality -->
+    <!-- My Challenge -->
+    <!-- Latest Post -->
+    <section>
+      <v-container grid-list-md class="mt-5">
+        <h1>Latest Post</h1>
+        <v-row class="mt-1">
+          <v-col v-for="j in 3" :key="j">
+            <v-card class="mx-auto" max-width="344">
+              <v-img
+                src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                height="200px"
+              ></v-img>
+
+              <v-card-title>
+                Top western road trips
+              </v-card-title>
+
+              <v-card-subtitle>
+                1,000 miles of wonder
+              </v-card-subtitle>
+
+              <v-card-actions>
+                <v-btn color="orange lighten-2" text>
+                  Explore
+                </v-btn>
+
+                <v-spacer></v-spacer>
+
+                <v-btn icon @click="show = !show">
+                  <v-icon>{{
+                    show ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                  }}</v-icon>
+                </v-btn>
+              </v-card-actions>
+
+              <v-expand-transition>
+                <div v-show="show">
+                  <v-divider></v-divider>
+
+                  <v-card-text>
+                    I'm a thing. But, like most politicians, he promised more
+                    than he could deliver. You won't have time for sleeping,
+                    soldier, not with all the bed making you'll be doing. Then
+                    we'll go with that data file! Hey, you add a one and two
+                    zeros to that or we walk! You're going to do his laundry?
+                    I've got to find a way to escape.
+                  </v-card-text>
+                </div>
+              </v-expand-transition>
+            </v-card>
+          </v-col>
         </v-row>
       </v-container>
     </section>

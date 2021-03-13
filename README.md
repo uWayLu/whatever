@@ -19,3 +19,15 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## TODO
+
++ [x] Home Layout
++ [ ] Home Content
++ [ ] RWD
++ [ ] Deploy
+
+## Reference
+
+https://blog.csdn.net/swallowblank/article/details/95908433
+https://vuejsexamples.com/20-best-landing-page-template-with-vuejs/
