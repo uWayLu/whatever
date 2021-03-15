@@ -32,10 +32,10 @@
         </v-container>
       </v-parallax>
     </section>
-    <!-- About Me -->
-    <section>
+    <!-- About -->
+    <section id="about">
       <v-container class="mt-5">
-        <h1>About Me</h1>
+        <h1>About</h1>
         <v-row justify="center" class="mt-1">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -61,8 +61,9 @@
         </v-row>
       </v-container>
     </section>
+    <v-divider class="ma-5"></v-divider>
     <!-- Project -->
-    <section>
+    <section id="project">
       <v-container grid-list-xs class="mt-5">
         <h1>Project</h1>
         <v-row v-for="i in 2" :key="i" class="mt-1">
@@ -86,8 +87,9 @@
     <!-- My Speciality -->
     <!-- My Challenge -->
     <!-- Latest Post -->
+    <v-divider class="ma-5" id="latest-post"></v-divider>
     <section>
-      <v-container grid-list-md class="mt-5">
+      <v-container grid-list-xs class="mt-5">
         <h1>Latest Post</h1>
         <v-row class="mt-1">
           <v-col v-for="j in 3" :key="j">
@@ -124,4 +126,5 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

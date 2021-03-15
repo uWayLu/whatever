@@ -1,17 +1,21 @@
 <template>
   <v-app>
-    <header></header>
-    <router-view />
+    <app-bar />
+    <v-container id="router-view">
+      <router-view />
+    </v-container>
     <app-footer />
   </v-app>
 </template>
 
 <script>
+import AppBar from '@/components/AppBar';
 import AppFooter from '@/components/Footer';
 
 export default {
   name: 'App',
   components: {
+    AppBar,
     AppFooter,
   },
 };
@@ -25,6 +29,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
+}
+
+#router-view {
+  max-width: 1200px;
 }
 </style>
