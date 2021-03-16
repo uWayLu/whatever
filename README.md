@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -22,14 +22,21 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## TODO
 
-+ [x] Home Layout
-+ [ ] Home Content
-+ [ ] RWD
-+ [ ] Deploy
+- [x] Home Layout
+- [ ] Home Content
+- [ ] RWD
+- [x] Deploy
+- [ ] Note (Evernote, Notion and gitbook)
+- [ ] Rss Feeder
+
+## To-Read
+
+- [ ] Vue-Router
+- [x] Vuetify
 
 ## Reference
 
-https://blog.csdn.net/swallowblank/article/details/95908433
-https://vuejsexamples.com/20-best-landing-page-template-with-vuejs/
-https://vuetifyjs.com/zh-Hans/components/application/#section-9ed88ba45e94752868078bb0
-
+https://blog.csdn.net/swallowblank/article/details/95908433  
+https://vuejsexamples.com/20-best-landing-page-template-with-vuejs/  
+https://vuetifyjs.com/zh-Hans/components/application/#section-9ed88ba45e94752868078bb0  
+https://codesandbox.io/s/vuetify-landing-page-forked-8ym49?file=/src/App.vue
