@@ -72,9 +72,7 @@
               <v-card-title primary-title>
                 Card {{ 4 * (i - 1) + j }}
               </v-card-title>
-              <v-card-subtitle>
-                subtitle
-              </v-card-subtitle>
+              <v-card-subtitle> subtitle </v-card-subtitle>
               <v-card-text>
                 Greyhound divisively hello coldly wonderfully marginally far
                 upon excluding.
@@ -91,52 +89,28 @@
     <section>
       <v-container grid-list-xs class="mt-5">
         <h1>Latest Post</h1>
-        <v-row class="mt-1">
-          <v-col v-for="j in 3" :key="j">
-            <v-card class="mx-auto" max-width="344">
-              <v-img
-                src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                height="200px"
-              ></v-img>
-
-              <v-card-title>
-                Top western road trips
-              </v-card-title>
-
-              <v-card-subtitle>
-                1,000 miles of wonder
-              </v-card-subtitle>
-
-              <v-card-actions>
-                <v-btn color="orange lighten-2" text>
-                  Explore
-                </v-btn>
-
-                <v-spacer></v-spacer>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
-    <!-- Test Feed -->
-    <section>
-      <v-container grid-list-xs>
-        <Feed :feedUrl="feedUrl" :name="name" :limit="limit" />
+        <LatestPost
+          :feedUrl="latestPost.feedUrl"
+          :name="latestPost.name"
+          :limit="latestPost.limit"
+        />
       </v-container>
     </section>
   </v-main>
 </template>
 
 <script>
-import Feed from '@/components/Feed';
+import LatestPost from '@/components/LatestPost';
 
 export default {
   data: () => ({
-    feedUrl: 'https://uwaylu.github.io/blog/rss.xml',
+    latestPost: {
+      feedUrl: 'https://uwaylu.github.io/blog/rss.xml',
+      limit: 5,
+    },
   }),
   components: {
-    Feed,
+    LatestPost,
   },
 };
 </script>
