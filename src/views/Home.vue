@@ -119,12 +119,26 @@
         </v-row>
       </v-container>
     </section>
+    <!-- Test Feed -->
+    <section>
+      <v-container grid-list-xs>
+        <Feed :feedUrl="feedUrl" :name="name" :limit="limit" />
+      </v-container>
+    </section>
   </v-main>
 </template>
 
 <script>
-export default {};
+import Feed from '@/components/Feed';
+
+export default {
+  data: () => ({
+    feedUrl: 'https://uwaylu.github.io/blog/rss.xml',
+  }),
+  components: {
+    Feed,
+  },
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
