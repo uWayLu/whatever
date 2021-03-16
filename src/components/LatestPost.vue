@@ -2,7 +2,7 @@
   <v-container v-if="error"> {{ error }}</v-container>
   <v-container v-else>
     <LatestPostCard
-      v-for="(article, index) of getArticles()"
+      v-for="(article, index) of getLatestPosts"
       :key="index"
       :article="article"
     />
@@ -14,7 +14,7 @@ import LatestPostCard from '@/components/LatestPostCard';
 import RSSParser from 'rss-parser';
 
 export default {
-  name: 'Feed',
+  name: 'LatestPost',
   components: {
     LatestPostCard,
   },
@@ -75,10 +75,12 @@ export default {
         this.loading = false;
       }
     },
-    getArticles() {
+  },
+  computed: {
+    getLatestPosts() {
       if (this.feed.items && this.feed.items) {
-        return this.feed.items
-          .sort((a, b) => (a.isoDate < b.isoDate ? 1 : -1))
+        return [...this.feed.items]
+          .sort((a, b) => a.isoDate < b.isoDate)
           .slice(0, this.limit);
       }
       return undefined;
