@@ -1,54 +1,80 @@
 <template>
   <v-main>
     <section>
+      <!-- src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" -->
       <v-parallax
-        src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-        height="600"
+        src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        height="500"
       >
-        <v-container>
-          <v-row align="center">
-            <v-col>
-              <h1
-                class="white--text mb-2 display-1 text-xs-center"
-                style="font-weight: 900; text-shadow: 3px 2px #000000"
-              >
-                Attack!
-              </h1>
-              <div
-                class="white--text subheading mb-3 text-xs-center"
-                style="font-weight: 900; text-shadow: 2px 2px #000000"
-              >
-                Coffe Soda Give Me Something
-              </div>
-              <h5>Coming Soon...</h5>
-            </v-col>
-            <v-col>
-              <v-img
-                src="http://res.hpoi.net.cn/gk/cover/n/2015/02/a67d87bd0eba453b864f5daf1dce5fa5.jpg?date=1464613555000"
-                max-height="500"
-              ></v-img>
-            </v-col>
-          </v-row>
-        </v-container>
+        <v-row>
+          <v-col class="align-self-center">
+            <div class="font-weight-bold text-h6">
+              Hola, I'm
+              <span class="primary--text text--lighten-2">WebbLu</span>
+            </div>
+            <div class="font-weight-bold text-h3 my-3">PHP Web developer</div>
+
+            <div
+              class="font-weight-bold text-h4 mb-2"
+              style="text-shadow: 3px 2px #000000"
+            >
+              You're Awesome!
+            </div>
+            <div class="font-weight-bold text-h5">
+              May I Cooperate With You?
+            </div>
+          </v-col>
+          <v-col class="d-flex align-end justify-center">
+            <v-img
+              class="justify-self-end"
+              src="./../static/you-thumb-up.png"
+              max-width="520"
+            ></v-img>
+          </v-col>
+        </v-row>
+        <!-- src="http://res.hpoi.net.cn/gk/cover/n/2015/02/a67d87bd0eba453b864f5daf1dce5fa5.jpg?date=1464613555000" -->
       </v-parallax>
     </section>
     <!-- About -->
     <section id="about">
       <v-container class="mt-5">
         <h1>About</h1>
-        <v-row justify="center" class="mt-1">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque sit amet ante pretium, porttitor urna nec, vehicula
-            odio. Aliquam facilisis semper urna congue efficitur. Ut at
-            tristique nisl. Curabitur ac justo id nulla vestibulum bibendum vel
-            porttitor nisl. Duis imperdiet cursus magna, sed aliquam odio
-            lacinia ut. Aenean ullamcorper et sapien id ultrices. Morbi ornare
-            sit amet neque nec vulputate. Sed pharetra ornare convallis.
-            Phasellus sapien ligula, efficitur nec congue ac, dignissim a dui.
-            Phasellus malesuada nec nisl vel laoreet.
-          </p>
-
+        <v-row class="mt-1">
+          <v-col >
+            <p class="text-justify">
+              索引走過的痕跡；<br />
+              人與動物區別，在於思想、工具的使用、有價值觀所權衡。<br />
+              透過工具組合各種元素成為 WebbLu 索引頁！<br />
+              本頁索引四散各處的筆記，網誌以及 Github 專案，<br />
+              若有任何寶貴的意見，您可以發送到
+              <v-btn
+                color="secondary"
+                x-small
+                href="mailto:'u.master.o.twn+landing@gmail.com'"
+                >電子郵箱</v-btn
+              >
+            </p>
+          </v-col>
+          <v-col>
+            <v-form ref="form">
+              <v-text-field
+                name="nickname"
+                label="Nickname"
+              ></v-text-field>
+              <v-text-field
+                name="email"
+                label="E-Mail"
+              ></v-text-field>
+              <v-text-field
+                name="message"
+                label="Message"
+              ></v-text-field>
+              <v-btn class="mr-4 justify-left" color="primary" type="submit" disabled>submit</v-btn>
+            </v-form>
+          </v-col>
+        </v-row>
+        <div class="d-flex">
+          <v-divider width="3px" class="ma-5"></v-divider>
           <v-btn color="blue" class="ma-1" text icon
             ><v-icon large>mdi-linkedin</v-icon>
           </v-btn>
@@ -58,15 +84,20 @@
           <v-btn color="blue lighten-2" class="ma-1" text icon
             ><v-icon large>mdi-twitter</v-icon>
           </v-btn>
-        </v-row>
+          <v-divider class="ma-5"></v-divider>
+        </div>
       </v-container>
     </section>
-    <v-divider class="ma-5"></v-divider>
+    <!-- <v-divider class="ma-5"></v-divider> -->
     <!-- Project -->
     <section id="project">
       <v-container grid-list-xs class="mt-5">
-        <h1>Project</h1>
-        <v-row v-for="i in 2" :key="i" class="mt-1">
+        <h1>Gist & Repo</h1>
+        <v-row
+          v-for="i in Math.ceil(projects.length / 4)"
+          :key="i"
+          class="mt-1"
+        >
           <v-col v-for="j in 4" :key="j">
             <v-card shaped>
               <v-card-title primary-title>
@@ -108,6 +139,15 @@ export default {
       feedUrl: 'https://uwaylu.github.io/blog/rss.xml',
       limit: 5,
     },
+    projects: [
+      { title: '', caption: '', type: '', href: '' },
+      { title: '', caption: '', type: '', href: '' },
+      { title: '', caption: '', type: '', href: '' },
+      { title: '', caption: '', type: '', href: '' },
+      { title: '', caption: '', type: '', href: '' },
+      { title: '', caption: '', type: '', href: '' },
+      { title: '', caption: '', type: '', href: '' },
+    ],
   }),
   components: {
     LatestPost,

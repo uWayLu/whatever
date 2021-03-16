@@ -28,6 +28,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - [x] Deploy
 - [ ] Note (Evernote, Notion and gitbook)
 - [x] RSS Feed Posts
+- [ ] zh-tw / en
 
 ## To-Read
 
