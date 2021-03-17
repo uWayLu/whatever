@@ -80,7 +80,7 @@ export default {
     getLatestPosts() {
       if (this.feed.items && this.feed.items) {
         return [...this.feed.items]
-          .sort((a, b) => a.isoDate < b.isoDate)
+          .sort((a, b) => new Date(b.isoDate) - new Date(a.isoDate))
           .slice(0, this.limit);
       }
       return undefined;
