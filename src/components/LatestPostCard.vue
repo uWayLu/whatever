@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid mx-0 px-0>
     <v-card elevation="2" outlined class="px-2">
       <v-card-title class="text-h5 mb-2">
         <a :href="article.link">{{ article.title }}</a>

@@ -1,13 +1,12 @@
 <template>
   <v-main>
     <section>
-      <!-- src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" -->
       <v-parallax
         src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         height="500"
       >
         <v-row>
-          <v-col class="align-self-center">
+          <v-col class="align-self-center" cols="6">
             <div class="font-weight-bold text-h6">
               Hola, I'm
               <span class="primary--text text--lighten-2">WebbLu</span>
@@ -24,15 +23,15 @@
               May I Cooperate With You?
             </div>
           </v-col>
-          <v-col class="d-flex align-end justify-center">
+          <v-col class="d-flex align-end justify-center" cols="6">
             <v-img
               class="justify-self-end"
               src="./../static/you-thumb-up.png"
               max-width="520"
+              gradient
             ></v-img>
           </v-col>
         </v-row>
-        <!-- src="http://res.hpoi.net.cn/gk/cover/n/2015/02/a67d87bd0eba453b864f5daf1dce5fa5.jpg?date=1464613555000" -->
       </v-parallax>
     </section>
     <!-- About -->
@@ -70,8 +69,9 @@
               >
             </div>
           </v-col>
-          <v-col>
-            <v-form ref="form">
+          <v-col class="align-self-center">
+            <span class="text-h6">Coming Soon...</span>
+            <v-form ref="form" hidden>
               <v-text-field name="nickname" label="Nickname"></v-text-field>
               <v-text-field name="email" label="E-Mail"></v-text-field>
               <v-text-field name="message" label="Message"></v-text-field>
@@ -105,37 +105,65 @@
         </div>
       </v-container>
     </section>
-    <!-- <v-divider class="ma-5"></v-divider> -->
     <!-- Project -->
     <section id="project">
-      <v-container grid-list-xs class="mt-2">
+      <v-container class="mt-2">
         <h1>Gist & Repo</h1>
-        <v-row
-          v-for="i in Math.ceil(projects.length / 4)"
-          :key="i"
-          class="mt-1"
+        <v-container
+          fluid
+          class="d-flex justify-space-between text-justify flex-wrap"
         >
-          <v-col v-for="j in 4" :key="j">
-            <v-card shaped>
-              <v-card-title primary-title>
-                Card {{ 4 * (i - 1) + j }}
-              </v-card-title>
-              <v-card-subtitle> subtitle </v-card-subtitle>
-              <v-card-text>
-                Greyhound divisively hello coldly wonderfully marginally far
-                upon excluding.
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
+          <v-card
+            rounded="lg"
+            v-for="(project, index) in projects"
+            :key="index"
+            class="ma-1 flex-grow-1 d-flex flex-column justify-space-around"
+          >
+            <v-card-title class="text-subtitle-1">{{
+              project.title
+            }}</v-card-title>
+
+            <v-card-subtitle class="text-right">
+              <v-chip
+                v-for="tag in project.tags"
+                :key="tag + index"
+                small
+                outlined
+                color="blue"
+                class="mx-1 mb-1"
+                >{{ tag }}</v-chip
+              >
+            </v-card-subtitle>
+
+            <v-card-text v-if="project.captions" class="text-subtitle-2">
+              <div v-for="caption in project.captions" :key="caption">
+                {{ caption }}
+              </div>
+            </v-card-text>
+
+            <v-card-text v-if="project.hrefs" class="py-1 ml-3 text-right">
+              <v-btn
+                plain
+                icon
+                color="black"
+                v-for="href in project.hrefs"
+                :key="href.title"
+                target="_blank"
+                :href="href.href"
+              >
+                <v-icon>mdi-{{ href.icon }}</v-icon>
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </v-container>
       </v-container>
     </section>
     <!-- My Speciality -->
     <!-- My Challenge -->
     <!-- Latest Post -->
-    <v-divider class="ma-5" id="latest-post"></v-divider>
-    <section>
-      <v-container grid-list-xs class="mt-5">
+    <v-divider class="ma-5"></v-divider>
+    <section id="latest-post">
+      <v-container class="mt-5">
         <h1>Latest Post</h1>
         <LatestPost
           :feedUrl="latestPost.feedUrl"
@@ -157,13 +185,116 @@ export default {
       limit: 5,
     },
     projects: [
-      { title: '', caption: '', type: '', href: '' },
-      { title: '', caption: '', type: '', href: '' },
-      { title: '', caption: '', type: '', href: '' },
-      { title: '', caption: '', type: '', href: '' },
-      { title: '', caption: '', type: '', href: '' },
-      { title: '', caption: '', type: '', href: '' },
-      { title: '', caption: '', type: '', href: '' },
+      {
+        title: 'PHP 小助手包',
+        captions: ['composer install webblu/phpmyhelper'],
+        hrefs: [
+          {
+            title: 'Packagist: webblu/phpmyhelper',
+            href: 'https://packagist.org/packages/webblu/phpmyhelper',
+            icon: 'package-down',
+          },
+          {
+            title: 'Github',
+            href: 'https://github.com/uWayLu/phpmyhelper',
+            icon: 'github',
+          },
+        ],
+        tags: ['PHP', 'Composer', 'Packagist'],
+      },
+      {
+        title: 'PHP 解析 CNAME 成 hostname',
+        captions: ['Gist', '或許會加到 php-myhelper （如果繼續維護的話）'],
+        hrefs: [
+          {
+            title: 'Github',
+            href:
+              'https://gist.github.com/uWayLu/243d4681f1e43b18e73ccfa30ceffda0',
+            icon: 'github',
+          },
+        ],
+        tags: ['PHP'],
+      },
+      // { title: 'PTT 定時自動登入', captions: [''], hrefs: '', tags: [] },
+      {
+        title: '打包 sikulix2 的 docker image',
+        captions: [
+          'docker pull uwaylu/ubuntu-sikulix2-base',
+          '在 docker 中執行 sikulix 做圖像比對',
+        ],
+        hrefs: [
+          {
+            title: 'DockerHub',
+            href: 'https://hub.docker.com/r/uwaylu/ubuntu-sikulix2-base',
+            icon: 'docker',
+          },
+          {
+            title: 'Github',
+            href: 'https://github.com/uWayLu/ubuntu-sikulix2-base',
+            icon: 'github',
+          },
+        ],
+        tags: ['Docker', 'SikuliX'],
+      },
+      {
+        title: '打包 sikulix2 + selenium 的 docker image',
+        captions: [
+          'run sikulix in selenium offcial chrome docker (for selelium-hub) ',
+        ],
+        hrefs: [
+          {
+            title: 'DockerHub',
+            href: 'https://hub.docker.com/r/uwaylu/node-chrome-debug-sikulix',
+            icon: 'docker',
+          },
+          {
+            title: 'Github',
+            href:
+              'https://github.com/uWayLu/selenium-node-chrome-debug-sikulix',
+            icon: 'github',
+          },
+        ],
+        tags: ['Docker', 'SikuliX', 'Selenium'],
+      },
+      {
+        title: 'Contribute: MOPCON 2018',
+        captions: ['PHP Official Website Contributor', 'Site Staff'],
+        hrefs: [
+          {
+            title: 'MOPCON 2018',
+            href: 'https://mopcon.org/2018/',
+            icon: 'web',
+          },
+          {
+            title: 'Github',
+            href: 'https://github.com/uWayLu/MOPCON',
+            icon: 'github',
+          },
+        ],
+        tags: ['PHP', 'MOPCON', 'Contribution'],
+      },
+      {
+        title: 'Contribute: Vuepress-the-blog',
+        captions: ['A little contribution', ' fix: web feed link 404 when set custom base'],
+        hrefs: [
+          {
+            title: '@vuepress/plugin-blog',
+            href: 'https://vuepress.vuejs.org/plugin/official/plugin-blog.html',
+            icon: 'vuejs',
+          },
+          {
+            title: 'Github',
+            href: 'https://github.com/vuepress/vuepress-theme-blog',
+            icon: 'github',
+          },
+        ],
+        tags: ['Contribution', 'Vue', 'Vuepress'],
+      },
+    ],
+    notes: [
+      { title: 'Evernote', caption: '', type: '', hrefs: '' },
+      { title: 'Notion', caption: '', type: '', hrefs: '' },
+      { title: 'HackMD', caption: '', type: '', hrefs: '' },
     ],
   }),
   components: {

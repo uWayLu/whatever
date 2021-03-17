@@ -1,6 +1,6 @@
 <template>
-  <v-container v-if="error"> {{ error }}</v-container>
-  <v-container v-else>
+  <v-container fluid mx-0 px-0 v-if="error"> {{ error }}</v-container>
+  <v-container fluid mx-0 px-0 v-else>
     <LatestPostCard
       v-for="(article, index) of getLatestPosts"
       :key="index"
