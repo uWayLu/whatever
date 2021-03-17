@@ -40,49 +40,64 @@
       <v-container class="mt-5">
         <h1>About</h1>
         <v-row class="mt-1">
-          <v-col >
-            <p class="text-justify">
-              索引走過的痕跡；<br />
+          <v-col
+            class="d-flex flex-column justify-space-around justify-space-around"
+          >
+            <div class="text-justify">
+              索引走過的痕跡；從猴子到普通人？<br />
               人與動物區別，在於思想、工具的使用、有價值觀所權衡。<br />
-              透過工具組合各種元素成為 WebbLu 索引頁！<br />
-              本頁索引四散各處的筆記，網誌以及 Github 專案，<br />
+              透過工具組合各種元素成為 WebbLu 索引頁！
+            </div>
+            <div class="text-justify">
+              本頁索引四散各處的筆記，網誌以及 Github 專案，
               若有任何寶貴的意見，您可以發送到
               <v-btn
                 color="secondary"
                 x-small
-                href="mailto:'u.master.o.twn+landing@gmail.com'"
+                href="mailto:u.master.o.twn+landing@gmail.com?subject=Recommendation"
                 >電子郵箱</v-btn
               >
-            </p>
+            </div>
+            <div class="align-center">
+              <v-btn
+                href="https://uwaylu.github.io/Resume/"
+                class="blue--text text-body-1 font-weight-bold"
+                plain
+                x-large
+                >- Resume -</v-btn
+              >
+            </div>
           </v-col>
           <v-col>
             <v-form ref="form">
-              <v-text-field
-                name="nickname"
-                label="Nickname"
-              ></v-text-field>
-              <v-text-field
-                name="email"
-                label="E-Mail"
-              ></v-text-field>
-              <v-text-field
-                name="message"
-                label="Message"
-              ></v-text-field>
-              <v-btn class="mr-4 justify-left" color="primary" type="submit" disabled>submit</v-btn>
+              <v-text-field name="nickname" label="Nickname"></v-text-field>
+              <v-text-field name="email" label="E-Mail"></v-text-field>
+              <v-text-field name="message" label="Message"></v-text-field>
+              <v-btn class="mr-4" color="primary" type="submit" disabled
+                >submit</v-btn
+              >
             </v-form>
           </v-col>
         </v-row>
         <div class="d-flex">
           <v-divider width="3px" class="ma-5"></v-divider>
-          <v-btn color="blue" class="ma-1" text icon
+          <v-btn
+            color="blue"
+            class="ma-1"
+            text
+            icon
+            href="https://www.linkedin.com/in/webb-lu/"
+            target="_blank"
             ><v-icon large>mdi-linkedin</v-icon>
           </v-btn>
-          <v-btn color="black" class="ma-1" text icon
+          <v-btn
+            color="black"
+            class="ma-1"
+            text
+            icon
+            href="https://www.github.com/uwaylu/"
+            target="_blank"
             ><v-icon large>mdi-github</v-icon>
-          </v-btn>
-          <v-btn color="blue lighten-2" class="ma-1" text icon
-            ><v-icon large>mdi-twitter</v-icon>
           </v-btn>
           <v-divider class="ma-5"></v-divider>
         </div>
