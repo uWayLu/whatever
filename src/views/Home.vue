@@ -42,6 +42,8 @@
         <v-row class="mt-1">
           <v-col
             class="d-flex flex-column justify-space-around justify-space-around"
+            cols="12"
+            md="6"
           >
             <div class="text-justify">
               索引走過的痕跡；從猴子到普通人？<br />
@@ -106,7 +108,7 @@
     <!-- <v-divider class="ma-5"></v-divider> -->
     <!-- Project -->
     <section id="project">
-      <v-container grid-list-xs class="mt-5">
+      <v-container grid-list-xs class="mt-2">
         <h1>Gist & Repo</h1>
         <v-row
           v-for="i in Math.ceil(projects.length / 4)"
