@@ -42,7 +42,8 @@
           <v-col
             class="d-flex flex-column justify-space-around justify-space-around"
             cols="12"
-            md="6"
+            md="8"
+            offset-md="2"
           >
             <div class="text-justify">
               索引走過的痕跡；從猴子到普通人？<br />
@@ -50,12 +51,12 @@
               透過工具組合各種元素成為 WebbLu 索引頁！
             </div>
             <div class="text-justify">
-              本頁索引四散各處的筆記，網誌以及 Github 專案，
+              本頁索引四散各處的筆記，網誌以及 Github 專案，<br/>
               若有任何寶貴的意見，您可以發送到
               <v-btn
                 color="secondary"
                 x-small
-                href="mailto:u.master.o.twn+landing@gmail.com?subject=Recommendation"
+                href="mailto:webb.worker.tw+landing@gmail.com?subject=Recommendation"
                 >電子郵箱</v-btn
               >
             </div>
@@ -68,17 +69,6 @@
                 >- Resume -</v-btn
               >
             </div>
-          </v-col>
-          <v-col class="align-self-center">
-            <span class="text-h6">Coming Soon...</span>
-            <v-form ref="form" hidden>
-              <v-text-field name="nickname" label="Nickname"></v-text-field>
-              <v-text-field name="email" label="E-Mail"></v-text-field>
-              <v-text-field name="message" label="Message"></v-text-field>
-              <v-btn class="mr-4" color="primary" type="submit" disabled
-                >submit</v-btn
-              >
-            </v-form>
           </v-col>
         </v-row>
         <div class="d-flex">
