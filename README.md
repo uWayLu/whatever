@@ -1,4 +1,4 @@
-# uwaylu_landing
+# WebbLu Personal Web Page
 
 > A Vue.js project
 

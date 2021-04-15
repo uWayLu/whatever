@@ -19,7 +19,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>WebbLu | Landing Page</strong>
+        {{ new Date().getFullYear() }} — <strong>WebbLu | Personal Web Page</strong>
       </v-card-text>
     </v-card>
   </v-footer>
