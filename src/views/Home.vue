@@ -40,25 +40,20 @@
         <h1>About</h1>
         <v-row class="mt-1">
           <v-col
-            class="d-flex flex-column justify-space-around justify-space-around"
-            cols="12"
-            md="8"
-            offset-md="2"
+            class="d-flex flex-column justify-space-around justify-space-around align-center"
           >
             <div class="text-justify">
-              索引走過的痕跡；從猴子到普通人？<br />
-              人與動物區別，在於思想、工具的使用、有價值觀所權衡。<br />
-              透過工具組合各種元素成為 WebbLu 索引頁！
-            </div>
-            <div class="text-justify">
-              本頁索引四散各處的筆記，網誌以及 Github 專案，<br/>
-              若有任何寶貴的意見，您可以發送到
-              <v-btn
-                color="secondary"
-                x-small
-                href="mailto:webb.worker.tw+landing@gmail.com?subject=Recommendation"
-                >電子郵箱</v-btn
-              >
+              索引走過的痕跡；從猴子到普通人？
+              人與動物區別，在於思想、工具的使用、有價值觀所權衡。
+
+              <p class="my-3">透過工具組合各種元素成為 WebbLu 索引頁！</p>
+
+              本頁索引四散各處的筆記，網誌以及 Github
+              專案，如有任何想法建議，您可以透過<a
+                href="https://forms.gle/nj34gAa1uhnSn6iv7"
+                target="_blank"
+                >這份 Google 表單</a
+              >讓我知道。
             </div>
             <div class="align-center">
               <v-btn
@@ -98,7 +93,7 @@
     <!-- Project -->
     <section id="project">
       <v-container class="mt-2">
-        <h1>Gist & Repo</h1>
+        <h1>Gist, Repo, and Contributions</h1>
         <v-container
           fluid
           class="d-flex justify-space-between text-justify flex-wrap"
@@ -126,7 +121,11 @@
             </v-card-subtitle>
 
             <v-card-text v-if="project.captions" class="text-subtitle-2">
-              <div v-for="caption in project.captions" :key="caption">
+              <div
+                v-for="caption in project.captions"
+                :key="caption"
+                v-html="caption"
+              >
                 {{ caption }}
               </div>
             </v-card-text>
@@ -177,7 +176,11 @@ export default {
     projects: [
       {
         title: 'PHP 小助手包',
-        captions: ['composer install webblu/phpmyhelper'],
+        captions: [
+          'composer install webblu/phpmyhelper',
+          '2021.03 webblu/phpmyhelper:v1.1.2',
+          '<li class="ml-3">PHP解析 CNAME 成 hostname</li>',
+        ],
         hrefs: [
           {
             title: 'Packagist: webblu/phpmyhelper',
@@ -190,20 +193,26 @@ export default {
             icon: 'github',
           },
         ],
-        tags: ['PHP', 'Composer', 'Packagist'],
+        tags: ['PHP 7', 'Composer', 'Packagist'],
       },
       {
-        title: 'PHP 解析 CNAME 成 hostname',
-        captions: ['Gist', '或許會加到 php-myhelper （如果繼續維護的話）'],
+        title: '股票查詢工具盒',
+        captions: [
+          '懶人傳送門，<span style="text-decoration:line-through;">簡稱韭菜盒</span>',
+        ],
         hrefs: [
           {
+            title: 'WebbLu - Stock Tool',
+            href: 'https://uwaylu.github.io/stockTool',
+            icon: 'web',
+          },
+          {
             title: 'Github',
-            href:
-              'https://gist.github.com/uWayLu/243d4681f1e43b18e73ccfa30ceffda0',
+            href: 'https://github.com/uWayLu/stockTool',
             icon: 'github',
           },
         ],
-        tags: ['PHP'],
+        tags: ['Vite', 'Vue 3', 'Bootstrap 5'],
       },
       // { title: 'PTT 定時自動登入', captions: [''], hrefs: '', tags: [] },
       {
@@ -224,7 +233,7 @@ export default {
             icon: 'github',
           },
         ],
-        tags: ['Docker', 'SikuliX'],
+        tags: ['Docker Image', 'SikuliX'],
       },
       {
         title: '打包 sikulix2 + selenium 的 docker image',
@@ -244,7 +253,7 @@ export default {
             icon: 'github',
           },
         ],
-        tags: ['Docker', 'SikuliX', 'Selenium'],
+        tags: ['Docker Image', 'SikuliX', 'Selenium'],
       },
       {
         title: 'Contribute: MOPCON 2018',
@@ -261,11 +270,14 @@ export default {
             icon: 'github',
           },
         ],
-        tags: ['PHP', 'MOPCON', 'Contribution'],
+        tags: ['PHP 5', 'MOPCON 2018', 'Contribution'],
       },
       {
         title: 'Contribute: Vuepress-the-blog',
-        captions: ['A little contribution', ' fix: web feed link 404 when set custom base'],
+        captions: [
+          'A little contribution',
+          ' fix: web feed link 404 when set custom base',
+        ],
         hrefs: [
           {
             title: '@vuepress/plugin-blog',
@@ -278,7 +290,7 @@ export default {
             icon: 'github',
           },
         ],
-        tags: ['Contribution', 'Vue', 'Vuepress'],
+        tags: ['Contribution', 'Vue 2', 'Vuepress'],
       },
     ],
     notes: [

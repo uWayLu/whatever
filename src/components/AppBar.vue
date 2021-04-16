@@ -29,6 +29,9 @@
               {{ link.title }}
             </v-list-item-title>
           </v-list-item>
+          <v-list-item href="https://uwaylu.github.io/stockTool"
+            ><v-list-item-title>韭菜盒</v-list-item-title></v-list-item
+          >
           <v-list-item href="https://uwaylu.github.io/blog"
             ><v-list-item-title>Blog</v-list-item-title></v-list-item
           >
@@ -39,6 +42,7 @@
       <v-btn text v-for="link in links" :key="link.title" :to="link.path">
         {{ link.title }}
       </v-btn>
+      <v-btn text href="https://uwaylu.github.io/stockTool">韭菜盒</v-btn>
       <v-btn text href="https://uwaylu.github.io/blog">Blog</v-btn>
     </div>
   </v-app-bar>
