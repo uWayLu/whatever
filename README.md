@@ -1,45 +1,35 @@
-# WebbLu Personal Web Page
+# index
 
-> A Vue.js project
+This template should help get you started developing with Vue 3 in Vite.
 
-## Build Setup
+## Recommended IDE Setup
 
-```bash
-# install dependencies
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compile and Hot-Reload for Development
 
-## TODO
+```sh
+npm run dev
+```
 
-- [x] Home Layout
-- [ ] Home Content
-- [ ] RWD
-- [x] Deploy
-- [ ] Note (Evernote, Notion and gitbook)
-- [x] RSS Feed Posts
-- [ ] zh-tw / en
+### Compile and Minify for Production
 
-## To-Read
+```sh
+npm run build
+```
 
-- [ ] Vue-Router
-- [x] Vuetify
+### Lint with [ESLint](https://eslint.org/)
 
-## Reference
-
-https://blog.csdn.net/swallowblank/article/details/95908433  
-https://vuejsexamples.com/20-best-landing-page-template-with-vuejs/  
-https://vuetifyjs.com/zh-Hans/components/application/#section-9ed88ba45e94752868078bb0  
-https://codesandbox.io/s/vuetify-landing-page-forked-8ym49?file=/src/App.vue
-
-+ [vue-rss-feed DEMO](https://rssapp.github.io/vue-rss-feed/)
+```sh
+npm run lint
+```
