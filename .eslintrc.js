@@ -46,6 +46,7 @@ module.exports = {
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'linebreak-style': ["error", process.env.NODE_ENV === 'production' ? "unix" : "windows"]
+    // 'linebreak-style': ["error", process.env.NODE_ENV === 'production' ? "unix" : "Windows"]
+    'linebreak-style': ["error", "unix"]
   }
 }
