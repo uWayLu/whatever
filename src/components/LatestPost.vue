@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import LatestPostCard from '@/components/LatestPostCard';
+import LatestPostCard from '@/components/LatestPostCard.vue';
 import RSSParser from 'rss-parser';
 
 export default {

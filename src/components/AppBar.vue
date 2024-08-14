@@ -12,11 +12,11 @@
     <v-spacer></v-spacer>
     <div class="hidden-md-and-up">
       <v-menu offset-y>
-        <template v-slot:activator="{ on, attrs }">
-          <v-app-bar-nav-icon slot="activator" v-bind="attrs" v-on="on">
+        <!-- <template #activator="{ on, attrs }">
+          <v-app-bar-nav-icon v-bind="attrs" v-on="on">
             <v-icon>mdi-menu</v-icon>
           </v-app-bar-nav-icon>
-        </template>
+        </template> -->
         <v-list outlined>
           <v-list-item
             v-for="link in links"

@@ -124,7 +124,6 @@
               <div
                 v-for="caption in project.captions"
                 :key="caption"
-                v-html="caption"
               >
                 {{ caption }}
               </div>
@@ -154,18 +153,18 @@
     <section id="latest-post">
       <v-container class="mt-5">
         <h1>Latest Post</h1>
-        <LatestPost
+        <!-- <LatestPost
           :feedUrl="latestPost.feedUrl"
           :name="latestPost.name"
           :limit="latestPost.limit"
-        />
+        /> -->
       </v-container>
     </section>
   </v-main>
 </template>
 
 <script>
-import LatestPost from '@/components/LatestPost';
+// import LatestPost from '@/components/LatestPost.vue';
 
 export default {
   data: () => ({
@@ -300,7 +299,7 @@ export default {
     ],
   }),
   components: {
-    LatestPost,
+    // LatestPost,
   },
 };
 </script>

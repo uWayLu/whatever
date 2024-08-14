@@ -1,9 +1,18 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
+import { createApp } from 'vue'
 
-Vue.use(Vuetify);
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
-const opts = {};
+// Components
+// import App from './App.vue'
 
-export default new Vuetify(opts);
+const vuetify = createVuetify({
+  components,
+  directives,
+})
+
+export default vuetify
+// createApp(App).use(vuetify).mount('#app')
