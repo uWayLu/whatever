@@ -124,8 +124,8 @@
               <div
                 v-for="caption in project.captions"
                 :key="caption"
+                v-html="caption"
               >
-                {{ caption }}
               </div>
             </v-card-text>
 
