@@ -1,11 +1,11 @@
 <template>
   <v-footer dark padless>
-    <v-card flat tile class="indigo lighten-1 white--text text-center flex">
+    <v-card flat tile class="indigo lighten-1 white--text flex text-center">
       <v-card-text>
         <v-btn
           v-for="place in findMePlaces"
           :key="place.icon"
-          class="mx-1 white--text"
+          class="white--text mx-1"
           icon
           :href="place.href"
           :target="place.target"
@@ -35,14 +35,14 @@ export default {
       {
         icon: 'mdi-linkedin',
         href: 'https://www.linkedin.com/in/webb-lu/',
-        target: '_blank',
+        target: '_blank'
       },
       {
         icon: 'mdi-github',
         href: 'https://www.github.com/uwaylu/',
-        target: '_blank',
-      },
-    ],
-  }),
-};
+        target: '_blank'
+      }
+    ]
+  })
+}
 </script>

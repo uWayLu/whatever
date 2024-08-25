@@ -36,46 +36,45 @@
 
 <script>
 const parseDate = (tdate) => {
-  const systemDate = new Date(Date.parse(tdate));
-  const userDate = new Date();
-  const diff = Math.floor((userDate - systemDate) / 1000);
+  const systemDate = new Date(Date.parse(tdate))
+  const userDate = new Date()
+  const diff = Math.floor((userDate - systemDate) / 1000)
   if (diff < 59) {
-    return `${diff}s`;
+    return `${diff}s`
   }
   if (diff <= 3540) {
-    return `${Math.round(diff / 60)}m`;
+    return `${Math.round(diff / 60)}m`
   }
   if (diff <= 86400) {
-    return `${Math.round(diff / 3600)}h`;
+    return `${Math.round(diff / 3600)}h`
   }
   if (diff < 604800) {
-    return `${Math.round(diff / 86400)}d`;
+    return `${Math.round(diff / 86400)}d`
   }
-  return systemDate.toString().substring(4, 10);
-};
+  return systemDate.toString().substring(4, 10)
+}
 export default {
-  name: 'Article',
+  name: 'LatestPostCard',
   props: ['article'],
   methods: {
     getHostname() {
-      let hn;
+      let hn
       try {
-        const urlObj = new URL(this.article.link);
-        hn = urlObj.hostname.replace('www.', '').replace('ww2.', '');
+        const urlObj = new URL(this.article.link)
+        hn = urlObj.hostname.replace('www.', '').replace('ww2.', '')
       } catch (e) {
         // eslint-disable-next-line no-console
-        console.error(e.toString());
+        console.error(e.toString())
       }
-      return hn;
+      return hn
     },
     getDateTime() {
-      let dt;
-      if (this.article.isoDate) dt = parseDate(this.article.isoDate);
-      return dt;
-    },
-  },
-};
+      let dt
+      if (this.article.isoDate) dt = parseDate(this.article.isoDate)
+      return dt
+    }
+  }
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -8,7 +8,7 @@
         />
       </v-avatar>
     </v-app-bar-nav-icon>
-    <span class="ml-3 text-h5 font-weight-bold">WebbLu</span>
+    <span class="text-h5 font-weight-bold ml-3">WebbLu</span>
     <v-spacer></v-spacer>
     <div class="hidden-md-and-up">
       <v-menu offset-y>
@@ -54,8 +54,8 @@ export default {
     links: [
       { title: 'Home', path: '/' },
       { title: 'Gist & Repo', path: '#project' },
-      { title: 'Latest Post', path: '#latest-post' },
-    ],
-  }),
-};
+      { title: 'Latest Post', path: '#latest-post' }
+    ]
+  })
+}
 </script>

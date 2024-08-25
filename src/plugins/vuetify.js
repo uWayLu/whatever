@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+// import { createApp } from 'vue'
 
 // Vuetify
 import 'vuetify/styles'
@@ -11,7 +11,7 @@ import * as directives from 'vuetify/directives'
 
 const vuetify = createVuetify({
   components,
-  directives,
+  directives
 })
 
 export default vuetify

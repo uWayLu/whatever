@@ -9,16 +9,16 @@
 </template>
 
 <script>
-import AppBar from '@/components/AppBar.vue';
-import AppFooter from '@/components/Footer.vue';
+// import AppBar from '@/components/AppBar.vue'
+// import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    AppBar,
-    AppFooter,
-  },
-};
+    // AppBar,
+    // AppFooter
+  }
+}
 </script>
 
 <style>

@@ -33,3 +33,6 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Tailwind Setup
+[Tailwind CSS IntelliSense: Recommended VS Code Settings](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss#recommended-vs-code-settings)

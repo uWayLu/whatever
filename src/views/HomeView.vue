@@ -13,15 +13,10 @@
             </div>
             <div class="font-weight-bold text-h3 my-3">PHP Web developer</div>
 
-            <div
-              class="font-weight-bold text-h4 mb-2"
-              style="text-shadow: 3px 2px #000000"
-            >
+            <div class="font-weight-bold text-h4 mb-2" style="text-shadow: 3px 2px #000000">
               You're Awesome!
             </div>
-            <div class="font-weight-bold text-h5">
-              May I Cooperate With You?
-            </div>
+            <div class="font-weight-bold text-h5">May I Cooperate With You?</div>
           </v-col>
           <v-col class="d-flex align-end justify-center" cols="6">
             <v-img
@@ -39,17 +34,13 @@
       <v-container class="mt-5">
         <h1>About</h1>
         <v-row class="mt-1">
-          <v-col
-            class="d-flex flex-column justify-space-around justify-space-around align-center"
-          >
+          <v-col class="d-flex flex-column justify-space-around justify-space-around align-center">
             <div class="text-justify">
-              索引走過的痕跡；從猴子到普通人？
-              人與動物區別，在於思想、工具的使用、有價值觀所權衡。
+              索引走過的痕跡；從猴子到普通人？ 人與動物區別，在於思想、工具的使用、有價值觀所權衡。
 
               <p class="my-3">透過工具組合各種元素成為 WebbLu 索引頁！</p>
 
-              本頁索引四散各處的筆記，網誌以及 Github
-              專案，如有任何想法建議，您可以透過<a
+              本頁索引四散各處的筆記，網誌以及 Github 專案，如有任何想法建議，您可以透過<a
                 href="https://forms.gle/nj34gAa1uhnSn6iv7"
                 target="_blank"
                 >這份 Google 表單</a
@@ -94,19 +85,14 @@
     <section id="project">
       <v-container class="mt-2">
         <h1>Gist, Repo, and Contributions</h1>
-        <v-container
-          fluid
-          class="d-flex justify-space-between text-justify flex-wrap"
-        >
+        <v-container fluid class="d-flex justify-space-between flex-wrap text-justify">
           <v-card
             rounded="lg"
             v-for="(project, index) in projects"
             :key="index"
             class="ma-1 flex-grow-1 d-flex flex-column justify-space-around"
           >
-            <v-card-title class="text-subtitle-1">{{
-              project.title
-            }}</v-card-title>
+            <v-card-title class="text-subtitle-1">{{ project.title }}</v-card-title>
 
             <v-card-subtitle class="text-right">
               <v-chip
@@ -121,15 +107,10 @@
             </v-card-subtitle>
 
             <v-card-text v-if="project.captions" class="text-subtitle-2">
-              <div
-                v-for="caption in project.captions"
-                :key="caption"
-                v-html="caption"
-              >
-              </div>
+              <div v-for="caption in project.captions" :key="caption" v-html="caption"></div>
             </v-card-text>
 
-            <v-card-text v-if="project.hrefs" class="py-1 ml-3 text-right">
+            <v-card-text v-if="project.hrefs" class="ml-3 py-1 text-right">
               <v-btn
                 plain
                 icon
@@ -170,7 +151,7 @@ export default {
   data: () => ({
     latestPost: {
       feedUrl: 'https://uwaylu.github.io/blog/rss.xml',
-      limit: 5,
+      limit: 5
     },
     projects: [
       {
@@ -178,81 +159,76 @@ export default {
         captions: [
           'composer install webblu/phpmyhelper',
           '2021.03 webblu/phpmyhelper:v1.1.2',
-          '<li class="ml-3">PHP解析 CNAME 成 hostname</li>',
+          '<li class="ml-3">PHP解析 CNAME 成 hostname</li>'
         ],
         hrefs: [
           {
             title: 'Packagist: webblu/phpmyhelper',
             href: 'https://packagist.org/packages/webblu/phpmyhelper',
-            icon: 'package-down',
+            icon: 'package-down'
           },
           {
             title: 'Github',
             href: 'https://github.com/uWayLu/phpmyhelper',
-            icon: 'github',
-          },
+            icon: 'github'
+          }
         ],
-        tags: ['PHP 7', 'Composer', 'Packagist'],
+        tags: ['PHP 7', 'Composer', 'Packagist']
       },
       {
         title: '股票查詢工具盒',
-        captions: [
-          '懶人傳送門，<span style="text-decoration:line-through;">簡稱韭菜盒</span>',
-        ],
+        captions: ['懶人傳送門，<span style="text-decoration:line-through;">簡稱韭菜盒</span>'],
         hrefs: [
           {
             title: 'WebbLu - Stock Tool',
             href: 'https://uwaylu.github.io/stockTool',
-            icon: 'web',
+            icon: 'web'
           },
           {
             title: 'Github',
             href: 'https://github.com/uWayLu/stockTool',
-            icon: 'github',
-          },
+            icon: 'github'
+          }
         ],
-        tags: ['Vite', 'Vue 3', 'Bootstrap 5'],
+        tags: ['Vite', 'Vue 3', 'Bootstrap 5']
       },
       // { title: 'PTT 定時自動登入', captions: [''], hrefs: '', tags: [] },
       {
         title: '打包 sikulix2 的 docker image',
         captions: [
           'docker pull uwaylu/ubuntu-sikulix2-base',
-          '在 docker 中執行 sikulix 做圖像比對',
+          '在 docker 中執行 sikulix 做圖像比對'
         ],
         hrefs: [
           {
             title: 'DockerHub',
             href: 'https://hub.docker.com/r/uwaylu/ubuntu-sikulix2-base',
-            icon: 'docker',
+            icon: 'docker'
           },
           {
             title: 'Github',
             href: 'https://github.com/uWayLu/ubuntu-sikulix2-base',
-            icon: 'github',
-          },
+            icon: 'github'
+          }
         ],
-        tags: ['Docker Image', 'SikuliX'],
+        tags: ['Docker Image', 'SikuliX']
       },
       {
         title: '打包 sikulix2 + selenium 的 docker image',
-        captions: [
-          'run sikulix in selenium offcial chrome docker (for selelium-hub) ',
-        ],
+        captions: ['run sikulix in selenium offcial chrome docker (for selelium-hub) '],
         hrefs: [
           {
             title: 'DockerHub',
             href: 'https://hub.docker.com/r/uwaylu/node-chrome-debug-sikulix',
-            icon: 'docker',
+            icon: 'docker'
           },
           {
             title: 'Github',
-            href:
-              'https://github.com/uWayLu/selenium-node-chrome-debug-sikulix',
-            icon: 'github',
-          },
+            href: 'https://github.com/uWayLu/selenium-node-chrome-debug-sikulix',
+            icon: 'github'
+          }
         ],
-        tags: ['Docker Image', 'SikuliX', 'Selenium'],
+        tags: ['Docker Image', 'SikuliX', 'Selenium']
       },
       {
         title: 'Contribute: MOPCON 2018',
@@ -261,47 +237,44 @@ export default {
           {
             title: 'MOPCON 2018',
             href: 'https://mopcon.org/2018/',
-            icon: 'web',
+            icon: 'web'
           },
           {
             title: 'Github',
             href: 'https://github.com/uWayLu/MOPCON',
-            icon: 'github',
-          },
+            icon: 'github'
+          }
         ],
-        tags: ['PHP 5', 'MOPCON 2018', 'Contribution'],
+        tags: ['PHP 5', 'MOPCON 2018', 'Contribution']
       },
       {
         title: 'Contribute: Vuepress-the-blog',
-        captions: [
-          'A little contribution',
-          ' fix: web feed link 404 when set custom base',
-        ],
+        captions: ['A little contribution', ' fix: web feed link 404 when set custom base'],
         hrefs: [
           {
             title: '@vuepress/plugin-blog',
             href: 'https://vuepress.vuejs.org/plugin/official/plugin-blog.html',
-            icon: 'vuejs',
+            icon: 'vuejs'
           },
           {
             title: 'Github',
             href: 'https://github.com/vuepress/vuepress-theme-blog',
-            icon: 'github',
-          },
+            icon: 'github'
+          }
         ],
-        tags: ['Contribution', 'Vue 2', 'Vuepress'],
-      },
+        tags: ['Contribution', 'Vue 2', 'Vuepress']
+      }
     ],
     notes: [
       { title: 'Evernote', caption: '', type: '', hrefs: '' },
       { title: 'Notion', caption: '', type: '', hrefs: '' },
-      { title: 'HackMD', caption: '', type: '', hrefs: '' },
-    ],
+      { title: 'HackMD', caption: '', type: '', hrefs: '' }
+    ]
   }),
   components: {
     // LatestPost,
-  },
-};
+  }
+}
 </script>
 
 <style scoped></style>
