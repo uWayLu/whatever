@@ -34,14 +34,17 @@ const randomGreeting = ref()
 const getRandomGreeting = () => {
   const randomIndex = Math.floor(Math.random() * greetings.value.length)
   randomGreeting.value = greetings.value[randomIndex]
+  randomGreeting.value = greetings.value[2]
 }
 getRandomGreeting()
 </script>
 
 <template>
-  <div class="mx-auto flex aspect-[9/5] w-[80vw] border border-gray-300">
+  <div
+    class="mx-auto flex aspect-[23/14] w-[80vw] overflow-auto border border-gray-300"
+  >
     <div class="flex w-4/5 items-center justify-center p-4">
-      <div class="whitespace-pre-wrap text-center text-3xl">
+      <div class="whitespace-pre-wrap text-center text-3xl w-full">
         <ruby
           >{{ randomGreeting.base }}
           <rp>)</rp>
