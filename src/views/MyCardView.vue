@@ -22,6 +22,11 @@ const greetings = ref([
     ruby: '最新の魔法を見せてあげる',
     base: '讓你看看最新的魔法',
     info: ['https://www.youtube.com/watch?v=sJ6KbVtzN5g']
+  },
+  {
+    ruby: '今日は風が少し騒がしいな',
+    base: '今天的風兒有點喧囂啊',
+    info: ['https://www.youtube.com/watch?v=fQr4mrSE_hE', '男子高校生の日常']
   }
 ])
 
@@ -34,19 +39,34 @@ getRandomGreeting()
 </script>
 
 <template>
-  <p class="text-3xl font-bold underline">
-    <ruby
-      >{{ randomGreeting.base }}
-      <rp>)</rp>
-      <rt>{{ randomGreeting.ruby }}</rt>
-      <rp>(</rp>
-    </ruby>
-    <button @click="getRandomGreeting">🔄</button>
-  </p>
-  <p>Webb Lu</p>
-  <address>
-    <small> [Discord] [GitHub] [Mail] [Telegram] </small>
-  </address>
+  <div class="mx-auto flex aspect-[9/5] w-[80vw] border border-gray-300">
+    <div class="flex w-4/5 items-center justify-center p-4">
+      <div class="whitespace-pre-wrap text-center text-3xl">
+        <ruby
+          >{{ randomGreeting.base }}
+          <rp>)</rp>
+          <rt>{{ randomGreeting.ruby }}</rt>
+          <rp>(</rp>
+        </ruby>
+        <button @click="getRandomGreeting">🔄</button>
+      </div>
+    </div>
+    <div class="flex w-1/5 flex-col items-center justify-between p-4">
+      <img
+        src="https://avatars.githubusercontent.com/u/21689326?s=400&u=3659405c346f21ac9c082fbf72c3d18626e1c4d0&v=4"
+        alt=""
+        class="h-16 w-16 rounded-full"
+      />
+      <h3 class="text-lg font-semibold">Webb Lu</h3>
+      <address>
+        <div class="flex flex-col items-center space-y-2">
+          <a href="https://github.com" target="_blank" class="text-blue-500">GitHub</a>
+          <a href="https://telegram.org" target="_blank" class="text-blue-500">Telegram</a>
+          <a href="https://discord.com" target="_blank" class="text-blue-500">Discord</a>
+        </div>
+      </address>
+    </div>
+  </div>
 </template>
 
 <style scoped>
