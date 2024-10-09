@@ -41,10 +41,26 @@ getRandomGreeting()
 
 <template>
   <div
-    class="mx-auto flex aspect-[23/14] w-[80vw] overflow-auto border border-gray-300"
+    class="mx-auto flex aspect-[14/23] flex-col justify-between overflow-auto border border-gray-300"
   >
-    <div class="flex w-4/5 items-center justify-center p-4">
-      <div class="whitespace-pre-wrap text-center text-3xl w-full">
+    <div class="flex w-full flex-col items-center justify-between pt-3">
+      <img
+        src="https://avatars.githubusercontent.com/u/21689326?s=400&u=3659405c346f21ac9c082fbf72c3d18626e1c4d0&v=4"
+        alt=""
+        class="mt-3 h-32 w-32 rounded-full"
+      />
+      <h2 class="my-3 text-3xl font-semibold">Webb Lu</h2>
+      <address>
+        <div class="flex flex-col items-center space-y-2">
+          <a href="https://github.com" target="_blank" class="text-blue-500">GitHub</a>
+          <a href="https://telegram.org" target="_blank" class="text-blue-500">Telegram</a>
+          <a href="https://discord.com" target="_blank" class="text-blue-500">Discord</a>
+        </div>
+      </address>
+    </div>
+
+    <div class="flex w-full items-center justify-center p-4">
+      <div class="w-full whitespace-pre-wrap text-center text-3xl">
         <ruby
           >{{ randomGreeting.base }}
           <rp>)</rp>
@@ -53,21 +69,6 @@ getRandomGreeting()
         </ruby>
         <button @click="getRandomGreeting">🔄</button>
       </div>
-    </div>
-    <div class="flex w-1/5 flex-col items-center justify-between p-4">
-      <img
-        src="https://avatars.githubusercontent.com/u/21689326?s=400&u=3659405c346f21ac9c082fbf72c3d18626e1c4d0&v=4"
-        alt=""
-        class="h-16 w-16 rounded-full"
-      />
-      <h3 class="text-lg font-semibold">Webb Lu</h3>
-      <address>
-        <div class="flex flex-col items-center space-y-2">
-          <a href="https://github.com" target="_blank" class="text-blue-500">GitHub</a>
-          <a href="https://telegram.org" target="_blank" class="text-blue-500">Telegram</a>
-          <a href="https://discord.com" target="_blank" class="text-blue-500">Discord</a>
-        </div>
-      </address>
     </div>
   </div>
 </template>
